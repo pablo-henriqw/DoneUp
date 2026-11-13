@@ -45,6 +45,32 @@ function mostrarMensagem(texto, tipo = 'sucesso') {
     area.appendChild(aviso);
     setTimeout(() => aviso.remove(), 3500);
 }
+/* ---------- Frase motivacional ---------- */
+
+const frases = [
+    "Pequenos passos também levam a grandes conquistas.",
+    "Não espere pela motivação, comece e ela virá.",
+    "Seu único limite é aquele que você aceita.",
+    "A disciplina supera a motivação.",
+    "Cada tarefa concluída é uma vitória.",
+    "O segredo do progresso é nunca parar.",
+    "Faça hoje o que seu futuro agradecerá.",
+    "Você é capaz de muito mais do que imagina.",
+    "Grandes resultados começam com pequenas atitudes.",
+    "Não precisa ser perfeito, só precisa começar.",
+    "Um dia de cada vez, uma conquista de cada vez.",
+    "Seu esforço de hoje constrói seu amanhã."
+];
+
+const hoje = new Date().toDateString();
+
+// Usa sempre a mesma frase durante o dia
+let indice = Math.floor(
+    new Date().setHours(0, 0, 0, 0) / 86400000
+) % frases.length;
+
+document.getElementById("frase-motivacional").textContent =
+    frases[indice];
 
 /* ---------- Utilidades ---------- */
 
