@@ -152,6 +152,35 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--v
 .dia.hoje { background: rgba(220, 38, 38, 0.20); }
 .dia span { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
 .legenda { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 0.8rem; color: var(--suave); }
+/* ===== Frase Motivacional ===== */
+
+.motivacional-card {
+    background: #fff5f5;
+    border-left: 4px solid #dc2626;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.motivacional-titulo {
+    color: #dc2626;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#frase-motivacional {
+    color: #333;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.motivacional-autor {
+    color: #888;
+    font-size: 13px;
+}
 
 /* ===== 6. Celular e tablet ===== */
 @media (max-width: 900px) {
@@ -165,3 +194,5 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--v
     .calendario { grid-template-columns: 1fr; }
     .dia { min-height: 56px; padding: 4px; }
 }
+
+
