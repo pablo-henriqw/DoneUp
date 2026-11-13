@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | DoneUp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/tarefas.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body data-pagina="dashboard" data-titulo="Dashboard">
+<main>
+    <div class="cabecalho">
+        <div>
+            <h2 id="saudacao">Olá!</h2>
+            <p class="suave">Veja como estão as suas tarefas.</p>
+        </div>
+        <button class="botao" id="criar-rapida">+ Criar tarefa rápida</button>
+    </div>
+
+    <section class="grade">
+        <div class="painel resumo categoria">
+            <div><span class="suave">Total de tarefas</span><strong id="n-total">–</strong></div>
+            <i data-lucide="layers"></i>
+        </div>
+        <div class="painel resumo pendente">
+            <div><span class="suave">Pendentes</span><strong id="n-pendentes">–</strong></div>
+            <i data-lucide="clock"></i>
+        </div>
+        <div class="painel resumo em_andamento">
+            <div><span class="suave">Em andamento</span><strong id="n-andamento">–</strong></div>
+            <i data-lucide="loader"></i>
+        </div>
+        <div class="painel resumo concluida">
+            <div><span class="suave">Concluídas</span><strong id="n-concluidas">–</strong></div>
+            <i data-lucide="circle-check"></i>
+        </div>
+        <div class="painel resumo atrasada">
+            <div><span class="suave">Atrasadas</span><strong id="n-atrasadas">–</strong></div>
+            <i data-lucide="alarm-clock"></i>
+        </div>
+    </section>
+
+    <section class="grade larga">
+        <div class="painel">
+            <h2>Progresso geral</h2>
+            <strong id="porcentagem">–</strong>
+            <div class="barra"><div id="barra"></div></div>
+            <p class="suave">das tarefas estão concluídas</p>
+        </div>
+        <div class="painel">
+            <h2>Tarefas por status</h2>
+            <div class="grafico"><canvas id="grafico-status"></canvas></div>
+        </div>
+        <div class="painel">
+            <h2>Próximos vencimentos</h2>
+            <div id="proximas"></div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
