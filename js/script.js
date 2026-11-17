@@ -69,8 +69,8 @@ let indice = Math.floor(
     new Date().setHours(0, 0, 0, 0) / 86400000
 ) % frases.length;
 
-document.getElementById("frase-motivacional").textContent =
-    frases[indice];
+const elementoFrase = document.getElementById("frase-motivacional");
+if (elementoFrase) elementoFrase.textContent = frases[indice];
 
 /* ---------- Utilidades ---------- */
 

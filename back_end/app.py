@@ -3,7 +3,7 @@ import sqlite3
 from pathlib import Path
 from datetime import date
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DB_PATH = BASE_DIR / 'database' / 'doneup.db'
 app = Flask(__name__, static_folder=None)
 
